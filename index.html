@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kopenhagen Art Institute - Magasin</title>
+	<link rel="stylesheet" href="dist/css/homepage.css">
 	<link rel="stylesheet" href="dist/css/main.css">
+	<link rel="stylesheet" href="dist/css/all.min.css">
 </head>
 <body>
 	<!-- starting the navivagition bar -->
@@ -19,15 +21,166 @@
 					<div class="bar3"></div>
 				</div>
 				<ul class="collaps">
+                    <li class="navItem searchBox">
+							<form action="searches.html">  <!-- if the form is submitted , it take to this link with search parrams -->
+								<input name="name" class="search" type="text" placeholder="Movie name">
+								<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+							</form>
+					</li>
 					<li class="li menuItem"><a href="index.html">Home</a></li>
-					<li class="li menuItem"><a href="artShop.html">Art Guid</a></li>
-					<li class="li menuItem"><a href="biography.html">About us</a></li>
-                    <li class="li menuItem"><a href="latestNews.html"></a></li>
-                    <li class="li menuItem"><a href="cart.html">Cart</a></li>
+					<li class="li menuItem"><a href="artGuide.html">Art Guide</a></li>
+					<li class="li menuItem"><a href="aboutUs.html">About us</a></li>
+                    <li class="li menuItem"><a href="#contactUs">Contact Us</a></li>
 				</ul>
 			</div>
 		</div>
 		<!-- Nav bar ends -->
+		<!-- content and ads div starts -->
+		<div class="adsAndContent">
+			<!-- contents div starts -->
+			<div class="contentBody">
+				<div class="contentSection" id="new">
+					<div class="section">
+						<div class="container">
+							<span class="sectionTilte" title="Recent interviews, blogs, news etc">What's New</span>
+							<div class="sectionContent">
+								<div class="previewBoxes">
+									<div class="previewBox">
+										<a href="article.html" target="_blank" class="link">
+											<img class="featureImage" src="dist/images/whats new/img1.jpg" alt="">
+											<span class="title">
+												Lorem ipsum dolor sit amet.
+											</span>
+											<span class="shortDes">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+											</span>
+										</a>
+									</div>
+									<div class="previewBox">
+										<a href="article.html" target="_blank" class="link">
+											<img class="featureImage" src="dist/images/whats new/img1.jpg" alt="">
+											<span class="title">
+												Lorem ipsum dolor sit amet.
+											</span>
+											<span class="shortDes">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+											</span>
+										</a>
+									</div>
+									<div class="previewBox">
+										<a href="article.html" target="_blank" class="link">
+											<img class="featureImage" src="dist/images/whats new/img1.jpg" alt="">
+											<span class="title">
+												Lorem ipsum dolor sit amet.
+											</span>
+											<span class="shortDes">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- about sectio starts -->
+					<div class="section darkSection">
+						<div class="container">
+							<span style="text-align: center;" class="sectionTilte" title="About us">About Us</span>
+							<div class="content">
+								<img src="dist/images/about.jpg" alt="">
+								<div class="text">
+									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perspiciatis in eius dolorem dicta nulla iste pariatur accusamus nostrum sint earum necessitatibus consequuntur aperiam dolor sequi non id eaque, laudantium?</span>
+									<a class="moreButton" href="aboutUs.html">More...</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- about section ends -->
+					<!-- recent event section starting  -->
+					<div class="section">
+						<div class="container">
+							<span class="sectionTilte" title="Recent interviews, blogs, news etc">Recent Events</span>
+							<div class="sectionContent">
+								<div class="previewBoxes">
+									<div class="previewBox">
+										<a href="article.html" target="_blank" class="link">
+											<img class="featureImage" src="dist/images/whats new/img1.jpg" alt="">
+											<span class="title">
+												Lorem ipsum dolor sit amet.
+											</span>
+											<span class="shortDes">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+											</span>
+										</a>
+									</div>
+									<div class="previewBox">
+										<a href="article.html" target="_blank" class="link">
+											<img class="featureImage" src="dist/images/whats new/img1.jpg" alt="">
+											<span class="title">
+												Lorem ipsum dolor sit amet.
+											</span>
+											<span class="shortDes">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+											</span>
+										</a>
+									</div>
+									<div class="previewBox">
+										<a href="article.html" target="_blank" class="link">
+											<img class="featureImage" src="dist/images/whats new/img1.jpg" alt="">
+											<span class="title">
+												Lorem ipsum dolor sit amet.
+											</span>
+											<span class="shortDes">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- recent events section ending -->
+
+					<!-- art calender sectio starts -->
+					<div class="section darkSection">
+						<div class="container">
+							<span style="text-align: center;" class="sectionTilte" title="About us">Art Calender</span>
+							<div class="content">
+								<img src="dist/images/artCalender.jpg" alt="">
+								<div class="text">
+									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perspiciatis in eius dolorem dicta nulla iste pariatur accusamus nostrum sint earum necessitatibus consequuntur aperiam dolor sequi non id eaque, laudantium?</span>
+									<a class="moreButton" href="artGuide.html">More...</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- art calender section ends -->
+				</div>
+			</div>
+			<!-- ads section starts -->
+			<div class="adsBody">
+				<div class="container">
+					<a href="#" class="ads">
+						<img src="dist/images/ads/ads1.gif" alt="" class="featureImage">
+					</a>
+					<a href="#" class="ads">
+						<img src="dist/images/ads/ads2.gif" alt="" class="featureImage">
+					</a>
+					<a href="#" class="ads">
+						<img src="dist/images/ads/ads3.jpg" alt="" class="featureImage">
+					</a>
+					<a href="#" class="ads">
+						<img src="dist/images/ads/ads4.jpg" alt="" class="featureImage">
+					</a>
+				</div>
+			</div>
+			<!-- ads sections ends -->
+		</div>
+		<div id="footer">
+			<span>Copyright &#169 2020 kopenhagen.co. All rights resereved</span>
+		</div>
 
 		<script src="dist/js/main.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>

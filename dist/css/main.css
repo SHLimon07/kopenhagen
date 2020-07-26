@@ -1,6 +1,8 @@
 :root {
-    --navBarBg: linear-gradient(to bottom, #22a6b3, #22a6b3, #22a6b3);
+    /* --navBarBg: linear-gradient(to bottom, #22a6b3, #22a6b3, #22a6b3); */
     --navBarBg: #22a6b3;
+    --lightBg: rgba(34,166,179,0.1);
+    --midBg: rgba(34,166,179,0.4);
     --orangy: #e78200;
     --navBgSolid: #22a6b3;
     --darkText: #343f4d;
@@ -175,12 +177,50 @@ a:hover {
     -o-transition: all linear 0.3s;
 }
 
+
+#navBar .collaps li.navItem{
+    margin: 20px 0;
+}
+
+#navBar .searchBox form
+{
+    margin: 0 auto;
+    width: 200px;
+    border-radius: 20px;
+    background: #e8e8e8;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navBar .search
+{
+    padding: 5px 0 5px 15px;
+    color: var(--menuTextHoverColor);
+    outline: none;
+    border: none;
+    background: none;
+    width: 75%;
+}
+
+#navBar .searchBtn
+{
+    cursor: pointer;
+    color: var(--menuTextHoverColor);
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 30px;
+    background: #d8d8d8;
+}
+
+
 #navBar .collaps.toggle {
-        height: 93vh;
+        height: 320px;
         opacity: 0.8;
 }
 
-@media screen and (min-width: 1440px)
+@media screen and (min-width: 1265px)
 {
     #navBar .collaps {
         position: relative;
@@ -191,14 +231,20 @@ a:hover {
         flex-direction: row;
         opacity: 1;
         background: none;
+        /* justify-content: center; */
+        align-items: center;
     }
     #navBar .collaps li a {
         display: flex;
         align-items: center;
         width: auto;
         height: 100%;
-        padding: 0 15px;
+        padding: 5px 15px;
         border-right: 1px solid #686868;
+    }
+
+    #navBar .collaps li.navItem{
+        margin: 0 20px;
     }
     #navBar .collaps li:last-child a {
         border: none;

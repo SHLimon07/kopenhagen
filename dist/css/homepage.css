@@ -1,0 +1,141 @@
+
+/* this styling common css for all sections */
+.section{
+    padding-bottom: 30px;
+}
+
+.sectionTilte{
+    display: block;
+    padding: 20px 0;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: var(--midText);
+}
+
+.moreButton{
+    color: #fff;
+    background: var(--midBg);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.moreButton:hover{
+    transform: scale(0.9);
+}
+
+/* designing the preview boxes that contain an image, a title, and a short description of the article or event */
+.previewBoxes{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    box-sizing: border-box;
+}
+
+.previewBoxes .previewBox{
+    width: 100%;
+    border: 0px solid var(--lightText);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.previewBoxes .previewBox:hover{
+    transform: scale(0.98);
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.previewBoxes .previewBox{
+    width: 100%;
+}
+
+.previewBoxes .previewBox img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.previewBoxes .previewBox span{
+    padding-left: 10px;
+    background: var(--lightBg);
+}
+
+.previewBoxes .previewBox .title{
+    background: var(--lightBg);
+    padding-top: 15px;
+    color: var(--darkText);
+    display: block;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.previewBoxes .previewBox .shortDes{
+    padding: 10px;
+    color: var(--midText);
+    display: block;
+    font-size: 14px;
+}
+
+/* done styling the preview boxes */
+
+/* styling the dark section */
+.darkSection{
+    background-color: var(--lightBg);
+}
+
+.darkSection .content img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.darkSection .content .text span{
+    display: block;
+    color: var(--midText);
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 25px;
+}
+/* done styling the dark sections */
+
+/* styling the ads section */
+
+.adsBody{
+    background: var(--midBg);
+}
+
+.adsBody .container{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.adsBody .container img{
+    width: 100%;
+}
+/* styling the ads section finished */
+
+#footer{
+    background: var(--navBarBg);
+    opacity: 0.6;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (min-width: 750px) {
+    
+    .darkSection .content{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 30px;
+    }
+    .previewBoxes .previewBox{
+        width: 48%;
+    }
+    .adsAndContent{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+}
