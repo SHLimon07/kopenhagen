@@ -145,19 +145,52 @@ a:hover {
     -o-transition: all linear 0.2s;
 }
 
-#navBar .collaps li:hover a, #navBar .collaps li.active a{
-    background: var(--lightText); 
+#navBar .collaps li:hover a, #navBar .collaps li.active a{ 
     color: var(--darkText);
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+}
+
+#navBar .collaps li:hover a:after, #navBar .collaps li.active a:after{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--lightText); 
+}
+
+#navBar .collaps li a:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 50%;
+    z-index: -1;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+
+#navBar .collaps li:hover a:before, #navBar .collaps li.active a:before{
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: var(--lightText); 
+}
+
+#navBar .collaps li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 50%;
+    z-index: -1;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
 }
 
 #navBar .collaps li a {
@@ -170,11 +203,7 @@ a:hover {
     text-align: center;
     letter-spacing: 5px;
     font-weight: bold;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    position: relative;
 }
 
 
@@ -217,7 +246,7 @@ a:hover {
 
 #navBar .collaps.toggle {
         height: 320px;
-        opacity: 0.8;
+        opacity: 0.9;
 }
 
 @media screen and (min-width: 1265px)
@@ -240,15 +269,12 @@ a:hover {
         width: auto;
         height: 100%;
         padding: 5px 15px;
-        border-right: 1px solid #686868;
     }
 
     #navBar .collaps li.navItem{
         margin: 0 20px;
     }
-    #navBar .collaps li:last-child a {
-        border: none;
-    }
+    
     #navBar .buttonDiv {
         display: none;
     }
