@@ -145,8 +145,8 @@ a:hover {
     -o-transition: all linear 0.2s;
 }
 
-#navBar .collaps li:hover a {
-    background: var(--lightText);
+#navBar .collaps li:hover a, #navBar .collaps li.active a{
+    background: var(--lightText); 
     color: var(--darkText);
     transform: scale(0.9);
     -webkit-transform: scale(0.9);
@@ -256,3 +256,148 @@ a:hover {
 
 /* done styling navBar */
 
+/* styling the more button used in  most of the pages */
+
+.moreButton{
+    display: inline-block;
+    color: #fff;
+    background: var(--midBg);
+    padding: 5px 10px;
+    border-radius: 5px;
+    height: 26px;
+    align-self: flex-end;
+}
+
+.moreButton:hover{
+    transform: scale(0.9);
+}
+
+/* styling the preview boxes used in all pages */
+
+
+/* designing the preview boxes that contain an image, a title, and a short description of the article or event */
+.previewBoxes{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    box-sizing: border-box;
+}
+
+.previewBoxes .previewBox{
+    width: 100%;
+    border: 0px solid var(--lightText);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.previewBoxes .previewBox:hover{
+    transform: scale(0.98);
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.previewBoxes .previewBox{
+    width: 100%;
+}
+
+.previewBoxes .previewBox .featureImage{
+    display: block;
+    position: relative;
+    padding-bottom: 60%;
+    height: 0;
+}
+.previewBoxes .previewBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.previewBoxes .previewBox span{
+    padding-left: 10px;
+}
+
+.previewBoxes .previewBox .title{
+    background: var(--lightBg);
+    padding-top: 15px;
+    color: var(--darkText);
+    display: block;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.previewBoxes .previewBox .time{ /* this applies to event boxes only  */ 
+    background: var(--lightBg);
+    color: var(--darkText);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--orangy);
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.previewBoxes .previewBox .time span{
+    padding-left: 0;
+}
+
+.previewBoxes .previewBox .shortDes{
+    padding: 10px;
+    color: var(--midText);
+    display: block;
+    font-size: 14px;
+    background: var(--lightBg);
+}
+
+/* done styling the preview boxes */
+
+/* styling the ads section */
+
+.adsBody{
+    background: var(--midBg);
+}
+
+.adsBody .container{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.adsBody .container img{
+    width: 100%;
+}
+/* styling the ads section finished */
+
+
+/* styling the ads and content grid for larger devices */
+@media screen and (min-width: 750px) {
+
+    .contentSection .container{
+        width: 87%!important;
+        margin: 0 !important;
+        margin-left: auto !important;
+    }
+    .previewBoxes .previewBox{
+        width: 45%;
+    }
+    .adsAndContent{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+}
+
+
+/* styling the footer */
+#footer{
+    background: var(--navBarBg);
+    opacity: 0.6;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
