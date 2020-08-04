@@ -417,7 +417,11 @@ a:hover {
     }
     .adsAndContent{
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 20% 60% 20%;
+    }
+    .contentBody{
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
 

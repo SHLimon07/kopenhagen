@@ -1,0 +1,179 @@
+.menuBody{
+	width: 100%;
+	height: 100%;
+}
+.menu{
+	width: 80%;
+	margin: 30px auto;
+	border-radius: 15px;
+	/* border: 1px solid var(--orangy); */
+	position: sticky;
+	top: 75px;
+	left: 1px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.circle{
+	margin: 0;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	z-index: 9;
+	opacity: 0.5;
+	cursor:  pointer;
+	position: sticky;
+	top: 75px;
+	left: 1px;
+	overflow: hidden;
+}
+
+.circle:before{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	content: 'Menu';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--orangy);
+}
+
+.menu :after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--orangy);
+	opacity: .1;
+	z-index: -1;
+}
+
+.menu .title{
+	font-size: 22px;
+	text-transform: uppercase;
+	color: var(--navBarBg);
+	padding: 15px 0;
+}
+
+.menu .menuItems .item{
+	padding: 10px 0;
+	border-top: 1px solid var(--orangy);
+	color: #fff;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+
+.menu .menuItems .item:hover{
+	background: var(--orangy);
+}
+
+@media screen and (min-width: 750px) {
+	.menuBody{
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.adsBody{
+		grid-column-start: 3;
+		grid-row-start: 1;
+		grid-row-end: 10;
+	}
+
+	.menuBody .menu{
+		width: 83%;
+		margin-right: 30px;
+		margin-left: auto;
+	}
+}
+
+@media screen and (min-width: 1080px) {
+
+	.menuBody{
+		grid-column-start: 1;
+		grid-column-end: 2;
+		background-color: var(--lightBg);
+	}
+	.contentBody{
+		grid-column-start: 2!important;
+	}
+	.adsBody{
+		grid-column-start: 3;
+	}
+}
+
+/* getting the calender ready */
+
+.calenderDiv .grid .row {
+	display: flex;
+	justify-content: space-between;	
+	margin-bottom: 2px;
+}
+
+/* this styling keeps the date boxes a perfect square */
+.calenderDiv  .grid .row .square{
+	width: 14%;
+	padding-bottom: 14%;
+	position: relative;
+}
+
+.calenderDiv  .grid .row .col{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* border-radius: 50%; */
+	background-color: var(--lightBg);
+	border: 1px solid var(--midBg);
+}
+
+.calenderDiv .grid .row .col .date{
+	display: block;
+	padding: 2px;
+	color: var(--orangy);
+}
+
+/* styling the days row */
+.calenderDiv .grid .days .col{
+	width: 14%;
+	position: relative;
+	text-align: center;
+	background: var(--midBg);
+}
+
+.calenderDiv .grid .days .col .day{
+	padding: 10px;
+	display: block;
+	color: var(--navBarBg);
+}
+
+/* styling the calender navigator */
+.calender{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.calender div{
+	text-align: center;
+	padding: 20px;
+	font-size: 24px;
+	color: var(--orangy);
+	user-select: none;
+}
+
+.calender div .btn{
+	background: var(--lightBg);
+	padding: 5px 10px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.calender div .btn:hover{
+	background: var(--navBarBg);
+}
