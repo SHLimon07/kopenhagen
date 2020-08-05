@@ -53,10 +53,12 @@ function updateGrid () {
 			{
 				if(date.getMonth()!= monthNow)
 					return;
-				grid.children[j].children[i].querySelector('.date').innerHTML = date.getDate();
-				var temp = date.getDate();
-				temp++;
-				date.setDate(temp);
+				var dateNow = date.getDate();
+				var dateDiv = grid.children[j].children[i].querySelector('.date');
+				dateDiv.innerHTML = dateNow;
+				dateDiv.id = 'day'+ dateNow
+				dateNow++;
+				date.setDate(dateNow);
 			}
 		}
 	}

@@ -1,12 +1,10 @@
 .menuBody{
 	width: 100%;
-	height: 100%;
 }
 .menu{
 	width: 80%;
 	margin: 30px auto;
 	border-radius: 15px;
-	/* border: 1px solid var(--orangy); */
 	position: sticky;
 	top: 75px;
 	left: 1px;
@@ -57,7 +55,7 @@
 .menu .title{
 	font-size: 22px;
 	text-transform: uppercase;
-	color: var(--navBarBg);
+	color: var(--navBg);
 	padding: 15px 0;
 }
 
@@ -69,7 +67,8 @@
 	text-transform: capitalize;
 }
 
-.menu .menuItems .item:hover{
+.menu .menuItems .item:hover,
+.menu .menuItems .item.active{
 	background: var(--orangy);
 }
 
@@ -86,8 +85,7 @@
 
 	.menuBody .menu{
 		width: 83%;
-		margin-right: 30px;
-		margin-left: auto;
+		margin:0 auto;
 	}
 }
 
@@ -97,6 +95,8 @@
 		grid-column-start: 1;
 		grid-column-end: 2;
 		background-color: var(--lightBg);
+		grid-row-start: 1;
+		grid-row-end: 20;
 	}
 	.contentBody{
 		grid-column-start: 2!important;
@@ -104,6 +104,10 @@
 	.adsBody{
 		grid-column-start: 3;
 	}
+}
+
+.displayNone{
+	display: none;
 }
 
 /* getting the calender ready */
@@ -130,6 +134,7 @@
 	/* border-radius: 50%; */
 	background-color: var(--lightBg);
 	border: 1px solid var(--midBg);
+	overflow: hidden;
 }
 
 .calenderDiv .grid .row .col .date{
@@ -149,7 +154,7 @@
 .calenderDiv .grid .days .col .day{
 	padding: 10px 0;
 	display: block;
-	color: var(--navBarBg);
+	color: var(--navBg);
 }
 
 /* styling the calender navigator */
@@ -180,9 +185,28 @@
 }
 
 .calender div .btn:hover{
-	background: var(--navBarBg);
+	background: var(--navBg);
 }
 
+/* styling the event dots on dates */
+.calenderDiv .eventDot{
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 2px;
+	font-size: 10px;
+	overflow: hidden;
+	background: var(--midBg);
+	border-radius: 5px;
+	padding: 1px 2px;
+	color: #fff;
+	display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+}
+
+/* styling for mobile devices */
 @media screen and (max-width: 450px) {
 
 	.calender div{
@@ -200,5 +224,105 @@
 	.calenderDiv .grid .days .col .day{
 		font-size: 12px;
 	}
+	.calenderDiv .eventDot{
+		font-size: 8px;
+		height: 10px;
+	}
 	
 }
+
+
+/* styling the small preview boxes */
+.smallPreviewBoxes{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.smallPreviewBoxes .smallPreview{
+    width: 100%;
+    border: 0px solid var(--lightText);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.smallPreviewBoxes .smallPreview:hover{
+    transform: scale(0.98);
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.smallPreviewBoxes .smallPreview{
+    width: 100%;
+}
+
+.smallPreviewBoxes .smallPreview a{
+    width: 100%;
+    display: flex;
+    background: var(--lightBg);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.smallPreviewBoxes .smallPreview .content{
+	width: 80%;
+}
+.smallPreviewBoxes .smallPreview .featureImage{
+	width: 20%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.smallPreviewBoxes .smallPreview img{
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+
+.smallPreviewBoxes .smallPreview span{
+    padding-left: 10px;
+}
+
+.smallPreviewBoxes .smallPreview .title{
+    color: var(--darkText);
+    display: block;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.smallPreviewBoxes .smallPreview .time,
+.smallPreviewBoxes .smallPreview .address{ /* this applies to event boxes only  */ 
+    color: var(--darkText);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--orangy);
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.smallPreviewBoxes .smallPreview .time span,
+.smallPreviewBoxes .smallPreview .address span{
+    padding-left: 0;
+}
+
+.smallPreviewBoxes .smallPreview .shortDes{
+    padding: 10px;
+    color: var(--midText);
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    height: 44px;
+    overflow: hidden;
+	display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+}
+
+/* done styling the preview boxes */
+

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kopenhagen Art Institute - Art Guide</title>
-	<link rel="stylesheet" href="dist/css/artGuide.css">
-	<link rel="stylesheet" href="dist/css/main.css">
-	<link rel="stylesheet" href="dist/css/all.min.css">
-	<link rel="icon" href="dist/images/logos/icon.png">
-</head>
-<body>
-	<!-- starting the navivagition bar -->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Kopenhagen Art Institute - Art Guide</title>
+		<link rel="stylesheet" href="dist/css/artGuide.css">
+		<link rel="stylesheet" href="dist/css/main.css">
+		<link rel="stylesheet" href="dist/css/all.min.css">
+		<link rel="icon" href="dist/images/logos/icon.png">
+	</head>
+	<body>
+		<!-- starting the navivagition bar -->
 		<div id="navBar">
 			<div class="container">
 				<div class="logoDiv">
@@ -22,335 +22,465 @@
 					<div class="bar3"></div>
 				</div>
 				<ul class="collaps">
-                    <li class="navItem searchBox">
-							<form action="searches.html">  <!-- if the form is submitted , it take to this link with search parrams -->
-								<input name="name" class="search" type="text" placeholder="Movie name">
-								<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
-							</form>
-					</li>
-					<li class="li menuItem"><a href="index.html">Home</a></li>
-					<li class="li menuItem"><a href="artGuide.html">Art Guide</a></li>
-					<li class="li menuItem"><a href="aboutUs.html">About us</a></li>
-                    <li class="li menuItem"><a href="contactUs.html">Contact Us</a></li>
-				</ul>
+					<li class="navItem searchBox">
+						<form action="searches.html">  <!-- if the form is submitted , it take to this link with search parrams -->
+						<input name="name" class="search" type="text" placeholder="Movie name">
+						<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+					</form>
+				</li>
+				<li class="li menuItem"><a href="index.html">Home</a></li>
+				<li class="li menuItem"><a href="artGuide.html">Art Guide</a></li>
+				<li class="li menuItem"><a href="aboutUs.html">About us</a></li>
+				<li class="li menuItem"><a href="contactUs.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Nav bar ends -->
+	<!-- content and ads div starts -->
+	<div class="adsAndContent">
+		<!-- Menu div starting -->
+		<div class="menuBody ">
+			<div class="menu">
+				<div class="title">
+					<span>Menu</span>
+				</div>
+				<div class="menuItems">
+					<div class="item" id="calenderDiv">
+						<span>Calender</span>
+					</div>
+					<div class="item" id="artistDiv">
+						<span>Artists</span>
+					</div>
+					<div class="item" id="venuesDiv">
+						<span>Venues</span>
+					</div>
+				</div>
 			</div>
 		</div>
-		<!-- Nav bar ends -->
-		<!-- content and ads div starts -->
-		<div class="adsAndContent">
-			<!-- Menu div starting -->
-			<div class="menuBody ">
-				<div class="menu">
-					<div class="title">
-						<span>Menu</span>
-					</div>
-					<div class="menuItems">
-						<div class="item">
-							<span>Calender</span>
-						</div>
-						<div class="item">
-							<span>Artists</span>
-						</div>
-						<div class="item">
-							<span>Venues</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- done with menu div -->
-			<!-- contents div starts -->
-			<div class="contentBody">
-				<!-- creating the calender -->
-				<div class="calenderDiv">
-					<div class="container">
-						<div class="calender">
-							<div class="month">
-								<span class="monthBack btn" onclick="monthBack()"><i class="fas fa-chevron-left"></i></span>
-								<span class="monthNum"></span>
-								<span class="monthForth btn" onclick="monthForth()"><i class="fas fa-chevron-right"></i></span>
-							</div>
-							<div class="year">
-								<span class="yearBack btn" onclick="yearBack()"><i class="fas fa-chevron-left"></i></span>
-								<span class="yearNum"></span>
-								<span class="yearForth btn" onclick="yearForth()"><i class="fas fa-chevron-right"></i></span>
-							</div>
-						</div>
-						<div class="grid">
-							<div class="row days">
-								<div class="col">
-									<span class="day" id="sunday">Sun</span>
-								</div>
-								<div class="col">
-									<span class="day" id="monday">Mon</span>
-								</div>
-								<div class="col">
-									<span class="day" id="tuesday">Tue</span>
-								</div>
-								<div class="col">
-									<span class="day" id="wednesday">Wed</span>
-								</div>
-								<div class="col">
-									<span class="day" id="thursday">Thu</span>
-								</div>
-								<div class="col">
-									<span class="day" id="friday">Fri</span>
-								</div>
-								<div class="col">
-									<span class="day" id="saterday">Sat</span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-								<div class="square">
-									<div class="col">
-										<span class="date"></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- calender ends -->
-			</div>
-			<!-- ads section starts -->
-			<div class="adsBody">
+		<!-- done with menu div -->
+		<!-- contents div starts -->
+		<div class="contentBody">
+			<!-- creating the calender -->
+			<div class="calenderDiv">
 				<div class="container">
-					<a href="#" class="ads">
-						<img src="dist/images/ads/ads1.gif" alt="" class="featureImage">
-					</a>
-					<a href="#" class="ads">
-						<img src="dist/images/ads/ads2.gif" alt="" class="featureImage">
-					</a>
-					<a href="#" class="ads">
-						<img src="dist/images/ads/ads3.jpg" alt="" class="featureImage">
-					</a>
-					<a href="#" class="ads">
-						<img src="dist/images/ads/ads4.jpg" alt="" class="featureImage">
-					</a>
+					<span class="sectionTitle">Art Calender</span>
+					<div class="calender">
+						<div class="month">
+							<span class="monthBack btn" onclick="monthBack()"><i class="fas fa-chevron-left"></i></span>
+							<span class="monthNum"></span>
+							<span class="monthForth btn" onclick="monthForth()"><i class="fas fa-chevron-right"></i></span>
+						</div>
+						<div class="year">
+							<span class="yearBack btn" onclick="yearBack()"><i class="fas fa-chevron-left"></i></span>
+							<span class="yearNum"></span>
+							<span class="yearForth btn" onclick="yearForth()"><i class="fas fa-chevron-right"></i></span>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="row days">
+							<div class="col">
+								<span class="day" id="sunday">Sun</span>
+							</div>
+							<div class="col">
+								<span class="day" id="monday">Mon</span>
+							</div>
+							<div class="col">
+								<span class="day" id="tuesday">Tue</span>
+							</div>
+							<div class="col">
+								<span class="day" id="wednesday">Wed</span>
+							</div>
+							<div class="col">
+								<span class="day" id="thursday">Thu</span>
+							</div>
+							<div class="col">
+								<span class="day" id="friday">Fri</span>
+							</div>
+							<div class="col">
+								<span class="day" id="saterday">Sat</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+									<span class="eventDot">Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+									<span class="eventDot">Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+									<span class="eventDot">Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+							<div class="square">
+								<div class="col">
+									<span class="date"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class="sectionTitle">Calender Events</span>
+					<div class="events smallPreviewBoxes">
+						<div class="smallPreview">
+							<a href="artGuide.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<div class="time">
+										<span class="start">26/06/20</span>
+										<span>-</span>
+										<span class="end">29/06/20</span>
+									</div>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+									</span>
+								</div>
+							</a>
+						</div>
+						<div class="smallPreview">
+							<a href="artGuide.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<div class="time">
+										<span class="start">26/06/20</span>
+										<span>-</span>
+										<span class="end">29/06/20</span>
+									</div>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quo incidunt eaque dignissimos nisi unde aperiam optio fugiat maxime sunt.
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<!-- ads sections ends -->
+			<!-- calender ends -->
+			<!-- artists div starts -->
+			<div class="artistDiv">
+				<div class="container">
+					<span class="sectionTitle">Artists</span>
+					<div class="artists smallPreviewBoxes">
+						<div class="smallPreview">
+							<a href="artGuide.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+									</span>
+								</div>
+							</a>
+						</div>
+						<div class="smallPreview">
+							<a href="artGuide.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quo incidunt eaque dignissimos nisi unde aperiam optio fugiat maxime sunt.
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- artists div ending -->
+			<!-- venues div starts -->
+			<div class="venuesDiv ">
+				<div class="container">
+					<span class="sectionTitle">Venues</span>
+					<div class="venues smallPreviewBoxes">
+						<div class="smallPreview">
+							<a href="artGuide.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<div class="address">
+										<span>11,sfhjlf,jshf-389</span>
+									</div>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+									</span>
+								</div>
+							</a>
+						</div>
+						<div class="smallPreview">
+							<a href="artGuide.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<div class="address">
+										<span>11,sfhjlf,jshf-389</span>
+									</div>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quo incidunt eaque dignissimos nisi unde aperiam optio fugiat maxime sunt.
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- venues div ending -->
 		</div>
-		<div id="footer">
-			<span>Copyright &#169 2020 kopenhagen.co. All rights resereved</span>
+		<!-- ads section starts -->
+		<div class="adsBody">
+			<div class="container">
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads1.gif" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads2.gif" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads3.jpg" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads4.jpg" alt="" class="featureImage">
+				</a>
+			</div>
 		</div>
-
-		<script src="dist/js/main.js" type="text/javascript" charset="utf-8" async defer></script>
-		<script src="dist/js/artGuide.js" type="text/javascript" charset="utf-8" async defer></script>
-		<script src="dist/js/calender.js" type="text/javascript" charset="utf-8" async defer></script>
+		<!-- ads sections ends -->
+	</div>
+	<div id="footer">
+		<span>Copyright &#169 2020 kopenhagen.co. All rights resereved</span>
+	</div>
+	<script src="dist/js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="dist/js/artGuide.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="dist/js/calender.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

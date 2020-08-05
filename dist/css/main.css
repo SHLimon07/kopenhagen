@@ -1,6 +1,6 @@
 :root {
-    /* --navBarBg: linear-gradient(to bottom, #22a6b3, #22a6b3, #22a6b3); */
-    --navBarBg: #22a6b3;
+    --navBarBg: linear-gradient(to bottom, #38cfde, #22a6b3, #2995a0);
+    --navBg: #22a6b3;
     --lightBg: rgba(34,166,179,0.1);
     --midBg: rgba(34,166,179,0.4);
     --orangy: #e78200;
@@ -286,6 +286,14 @@ a:hover {
 /* done styling navBar */
 
 /* styling the more button used in  most of the pages */
+
+.sectionTitle{
+    display: block;
+    padding: 20px 0;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: var(--midText);
+}
 
 .moreButton{
     display: inline-block;

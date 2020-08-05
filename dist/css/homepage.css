@@ -6,13 +6,6 @@
     padding-bottom: 30px;
 }
 
-.sectionTilte{
-    display: block;
-    padding: 20px 0;
-    font-size: 24px;
-    text-transform: capitalize;
-    color: var(--midText);
-}
 
 /* styling the dark section */
 .darkSection{

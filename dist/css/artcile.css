@@ -23,27 +23,3 @@
 	line-height: 26px;
 	font-size: 14px;
 }
-
-.contentBody .gallery{
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	row-gap: 30px;
-	column-gap: 30px;
-	margin-bottom: 30px;
-}
-
-.contentBody .gallery .image{
-	position: relative;
-	width: 100%;
-	padding-bottom: 60%;
-	height: 0;
-}
-
-.contentBody .gallery .image img{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
