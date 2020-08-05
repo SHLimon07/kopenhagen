@@ -247,6 +247,7 @@
     border: 0px solid var(--lightText);
     border-radius: 15px;
     overflow: hidden;
+    padding: 5px 0;
 }
 
 .smallPreviewBoxes .smallPreview:hover{
@@ -323,6 +324,19 @@
   -webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 }
+@media screen and (max-width: 450px) {
 
-/* done styling the preview boxes */
+	
+	.smallPreviewBoxes .smallPreview .title{
+	    font-size: 16px;
+	}
+
+	.smallPreviewBoxes .smallPreview .shortDes,
+	.smallPreviewBoxes .smallPreview .time,
+	.smallPreviewBoxes .smallPreview .address
+	{
+		font-size: 12px
+	}
+}
+/* done styling the small preview boxes */
 
