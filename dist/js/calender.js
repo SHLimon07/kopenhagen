@@ -101,7 +101,7 @@ function yearBack () {
 function yearForth () {
 	// body... 
 
-	yearNow--;
+	yearNow++;
 	updateMonthYear();
 
 }

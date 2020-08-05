@@ -147,7 +147,7 @@
 }
 
 .calenderDiv .grid .days .col .day{
-	padding: 10px;
+	padding: 10px 0;
 	display: block;
 	color: var(--navBarBg);
 }
@@ -156,15 +156,19 @@
 .calender{
 	width: 100%;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 49% 49%;
+	justify-content: space-between;
 }
 
 .calender div{
 	text-align: center;
-	padding: 20px;
+	padding: 20px 0;
 	font-size: 24px;
 	color: var(--orangy);
 	user-select: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .calender div .btn{
@@ -172,8 +176,29 @@
 	padding: 5px 10px;
 	border-radius: 50%;
 	cursor: pointer;
+	text-align: center;
 }
 
 .calender div .btn:hover{
 	background: var(--navBarBg);
+}
+
+@media screen and (max-width: 450px) {
+
+	.calender div{
+		font-size: 18px;
+	}
+
+	.calender div .btn{
+		padding: 2px 6px;
+	}
+
+	.calenderDiv .grid .row .col .date{
+		font-size: 12px;
+	}
+
+	.calenderDiv .grid .days .col .day{
+		font-size: 12px;
+	}
+	
 }
