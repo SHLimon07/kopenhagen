@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kopenhagen Art Institute - Venue</title>
+	<link rel="stylesheet" href="dist/css/venue.css">
+	<link rel="stylesheet" href="dist/css/main.css">
+	<link rel="stylesheet" href="dist/css/all.min.css">
+	<link rel="icon" href="dist/images/logos/icon.png">
+</head>
+<body>
+	<!-- starting the navivagition bar -->
+		<div id="navBar">
+			<div class="container">
+				<div class="logoDiv">
+					<a href="index.html"><img src="dist/images/logos/logo.png" alt=""></a>
+				</div>
+				<div class="buttonDiv" onclick="navBarToggle()">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<ul class="collaps">
+                    <li class="navItem searchBox">
+							<form action="searches.html">  <!-- if the form is submitted , it take to this link with search parrams -->
+								<input name="name" class="search" type="text" placeholder="Movie name">
+								<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+							</form>
+					</li>
+					<li class="li menuItem"><a href="index.html">Home</a></li>
+					<li class="li menuItem"><a href="artGuide.html">Art Guide</a></li>
+					<li class="li menuItem"><a href="aboutUs.html">About us</a></li>
+                    <li class="li menuItem"><a href="contactUs.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Nav bar ends -->
+		<!-- content and ads div starts -->
+		<div class="adsAndContent">
+			<!-- contents div starts -->
+			<div class="contentBody">
+				<div class="container">
+					<div class="gridBox">
+						<div class="featureImage">
+							<img src="dist/images/recent event/img3.png" alt="">
+						</div>
+						<div class="details">
+							<span class="name">loer ispmr</span>
+							<span class="address">11, sdbjhf,dfjdjf-1388</span>
+						</div>
+					</div>
+					<span class="sectionTitle">Recent events on this venue</span>
+					<div class="events smallPreviewBoxes">
+						<div class="smallPreview">
+							<a href="event.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<div class="time">
+										<span class="start">26/06/20</span>
+										<span>-</span>
+										<span class="end">29/06/20</span>
+									</div>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+									</span>
+								</div>
+							</a>
+						</div>
+						<div class="smallPreview">
+							<a href="event.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<div class="time">
+										<span class="start">26/06/20</span>
+										<span>-</span>
+										<span class="end">29/06/20</span>
+									</div>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quo incidunt eaque dignissimos nisi unde aperiam optio fugiat maxime sunt.
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- ads section starts -->
+			<div class="adsBody">
+				<div class="container">
+					<a href="#" class="ads">
+						<img src="dist/images/ads/ads1.gif" alt="" class="featureImage">
+					</a>
+					<a href="#" class="ads">
+						<img src="dist/images/ads/ads2.gif" alt="" class="featureImage">
+					</a>
+					<a href="#" class="ads">
+						<img src="dist/images/ads/ads3.jpg" alt="" class="featureImage">
+					</a>
+					<a href="#" class="ads">
+						<img src="dist/images/ads/ads4.jpg" alt="" class="featureImage">
+					</a>
+				</div>
+			</div>
+			<!-- ads sections ends -->
+		</div>
+		<div id="footer">
+			<span>Copyright &#169 2020 kopenhagen.co. All rights resereved</span>
+		</div>
+
+		<script src="dist/js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>

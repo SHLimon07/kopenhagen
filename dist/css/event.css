@@ -1,0 +1,82 @@
+/* for the content title */
+.contentBody .title {
+	padding: 30px 0;
+	font-size: 24px;
+	letter-spacing: 3px;
+	font-weight: bold;
+	color: var(--darkText);
+	text-transform: capitalize;
+}
+
+.contentBody .featureImage img{
+	width: 50%;
+	margin-bottom: 30px;
+}
+
+.contentBody .details span,
+.contentBody .details a{
+	color: var(--midText);
+}
+
+.contentBody .details{
+	background: var(--lightBg);
+	padding: 20px 10px;
+	line-height: 20px;
+}
+
+.contentBody .details .desTitle{
+	color: var(--orangy);
+	letter-spacing: 2px;
+	font-size: 18px;
+}
+
+.contentBody .description{
+	margin-bottom: 30px;
+}
+
+.contentBody .description p{
+	padding: 20px 0;
+	color: var(--midText);
+	line-height: 26px;
+	font-size: 14px;
+}
+
+@media screen and (min-width: 750px) {
+	.contentBody .gridBox{
+		display: grid;
+		grid-template-columns: 30% 70%;
+		align-items: center;
+	}
+
+	.contentBody .featureImage img{
+		width: 100%;
+		margin-bottom: 0px;
+	}
+
+	.contentBody .details{
+		height: 100%;
+		padding-left: 20px;
+	}
+}
+
+@media screen and (max-width: 450px){
+
+	.contentBody .title{
+		font-size: 18px;
+	}
+
+	.contentBody .details .desTitle{
+		font-size: 16px;
+	}
+	
+	.contentBody .details span,
+	.contentBody .details a{
+		font-size: 14px;
+	}
+	.contentBody .description p{
+		font-size: 12px;
+	}
+	
+}
+
+

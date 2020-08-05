@@ -1,0 +1,179 @@
+/* for the content title */
+.contentBody{
+	margin: 30px 0;
+}
+.contentBody .featureImage img{
+	width: 50%;
+	margin-bottom: 30px;
+}
+
+.contentBody .details span{
+	color: var(--midText);
+}
+
+.contentBody .details{
+	background: var(--lightBg);
+	padding: 20px 10px;
+	line-height: 20px;
+}
+
+.contentBody .details .name{
+	display: block;
+	color: var(--orangy);
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 3px;
+	padding-bottom: 10px;
+}
+
+.contentBody .description p{
+	padding: 20px 0;
+	color: var(--midText);
+	line-height: 26px;
+	font-size: 14px;
+}
+
+@media screen and (min-width: 750px) {
+	.contentBody .gridBox{
+		display: grid;
+		grid-template-columns: 20% 40%;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contentBody .featureImage img{
+		width: 100%;
+		margin-bottom: 0px;
+	}
+
+	.contentBody .details{
+		height: 100%;
+		padding-left: 20px;
+	}
+}
+
+@media screen and (max-width: 450px){
+	
+	.contentBody .details span{
+		font-size: 14px;
+	}
+	.contentBody .description p{
+		font-size: 12px;
+	}
+
+	.contentBody .details .name{
+		font-size: 16px;
+		letter-spacing: 2px;
+	}
+	
+}
+
+
+/* styling the small preview boxes */
+.smallPreviewBoxes{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    box-sizing: border-box;
+    margin: 50px 0;
+}
+
+.smallPreviewBoxes .smallPreview{
+    width: 100%;
+    border: 0px solid var(--lightText);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.smallPreviewBoxes .smallPreview:hover{
+    transform: scale(0.98);
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.smallPreviewBoxes .smallPreview{
+    width: 100%;
+}
+
+.smallPreviewBoxes .smallPreview a{
+    width: 100%;
+    display: flex;
+    background: var(--lightBg);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.smallPreviewBoxes .smallPreview .content{
+	width: 80%;
+}
+.smallPreviewBoxes .smallPreview .featureImage{
+	width: 20%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.smallPreviewBoxes .smallPreview img{
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+
+.smallPreviewBoxes .smallPreview span{
+    padding-left: 10px;
+}
+
+.smallPreviewBoxes .smallPreview .title{
+    color: var(--darkText);
+    display: block;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.smallPreviewBoxes .smallPreview .time,
+.smallPreviewBoxes .smallPreview .address{ /* this applies to event boxes only  */ 
+    color: var(--darkText);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--orangy);
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.smallPreviewBoxes .smallPreview .time span,
+.smallPreviewBoxes .smallPreview .address span{
+    padding-left: 0;
+}
+
+.smallPreviewBoxes .smallPreview .shortDes{
+    padding: 10px;
+    color: var(--midText);
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    height: 44px;
+    overflow: hidden;
+	display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+}
+@media screen and (max-width: 450px) {
+
+	
+	.smallPreviewBoxes .smallPreview .title{
+	    font-size: 16px;
+	}
+
+	.smallPreviewBoxes .smallPreview .shortDes,
+	.smallPreviewBoxes .smallPreview .time,
+	.smallPreviewBoxes .smallPreview .address
+	{
+		font-size: 12px
+	}
+}
+/* done styling the small preview boxes */
+
