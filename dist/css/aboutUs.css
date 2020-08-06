@@ -1,0 +1,70 @@
+/* for the content title */
+.contentBody .title {
+	padding: 30px 0;
+	font-size: 24px;
+	letter-spacing: 3px;
+	font-weight: bold;
+	color: var(--darkText);
+	text-transform: capitalize;
+}
+
+.contentBody .featureImage img{
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.contentBody .description{
+	margin-bottom: 30px;
+}
+
+.contentBody .description p{
+	padding: 20px 0;
+	color: var(--midText);
+	line-height: 26px;
+	font-size: 14px;
+}
+
+.gridBox{
+	margin-bottom: 30px;
+	display: grid;
+	grid-template-columns: 100%;
+	row-gap: 30px;
+}
+
+.contact{
+	background: var(--lightBg);
+	padding: 20px 10px;
+}
+
+.contact .title{
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+.contact span,
+.contact a{
+	display: block;
+	color: var(--midText);
+}
+
+.officialInfo{
+	background: var(--lightBg);
+	padding: 20px 10px;
+}
+
+.officialInfo .title{
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+.officialInfo span{
+	display: block;
+	color: var(--midText);
+}
+
+@media screen and (min-width: 1080px) {
+	.gridBox{
+		grid-template-columns: 49% 49%;
+		column-gap: 30px;
+	}	
+}

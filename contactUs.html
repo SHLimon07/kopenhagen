@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Kopenhagen Art Institute - Contact Us</title>
+		<link rel="stylesheet" href="dist/css/contactUs.css">
+		<link rel="stylesheet" href="dist/css/main.css">
+		<link rel="stylesheet" href="dist/css/all.min.css">
+		<link rel="icon" href="dist/images/logos/icon.png">
+	</head>
+	<body>
+		<!-- starting the navivagition bar -->
+		<div id="navBar">
+			<div class="container">
+				<div class="logoDiv">
+					<a href="index.html"><img src="dist/images/logos/logo.png" alt=""></a>
+				</div>
+				<div class="buttonDiv" onclick="navBarToggle()">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<ul class="collaps">
+					<li class="navItem searchBox">
+						<form action="searches.html">  <!-- if the form is submitted , it take to this link with search parrams -->
+						<input name="name" class="search" type="text" placeholder="Movie name">
+						<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+					</form>
+				</li>
+				<li class="li menuItem"><a href="index.html">Home</a></li>
+				<li class="li menuItem"><a href="artGuide.html">Art Guide</a></li>
+				<li class="li menuItem"><a href="aboutUs.html">About us</a></li>
+				<li class="li menuItem active"><a href="contactUs.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Nav bar ends -->
+	<!-- content and ads div starts -->
+	<div class="adsAndContent">
+		<!-- contents div starts -->
+		<div class="contentBody">
+			<div class="container">
+				<div class="title" style="text-align: center">
+					<span>
+						Contact Information
+					</span>
+				</div>
+				<div class="featureImage">
+					<img src="dist/images/contactPage.jpg" alt="">
+				</div>
+				<div class="gridBox">
+					<div class="contact">
+						<a href="mailto:kopenhagen@kopenhaghen.dk" target="_blank">kopenhagen@kopenhaghen.dk</a>
+						<span class="address">Istedgade 75</span>
+						<span class="address">DK-1650 Copenhagen V</span>
+					</div>
+					<div class="officialInfo">
+						<span>CVR: 16363006</span>
+						<span>Bank: Merkur</span>
+						<span>Reg. 8401</span>
+						<span>Konto: 0001265299</span>
+						<span>SWIFT-kode: MEKUDK21</span>
+						<span>IBAN-nr.: DK7884010001265299</span>
+					</div>
+					<div class="advertisement">
+						<span>ADVERTISING AND
+							VISIBILITYCONTACT for art guide, advertising,
+						and visibility on kopenhagen.dkSend email to</span>
+						<span><a href="mailto:sales@kopenhagen.dk">sales@kopenhagen.dk</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ads section starts -->
+		<div class="adsBody">
+			<div class="container">
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads1.gif" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads2.gif" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads3.jpg" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads4.jpg" alt="" class="featureImage">
+				</a>
+			</div>
+		</div>
+		<!-- ads sections ends -->
+	</div>
+	<div id="footer">
+		<span>Copyright &#169 2020 kopenhagen.co. All rights resereved</span>
+	</div>
+	<script src="dist/js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
