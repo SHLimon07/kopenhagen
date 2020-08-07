@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Kopenhagen Art Institute - Art Guide</title>
+		<link rel="stylesheet" href="dist/css/searchResult.css">
+		<link rel="stylesheet" href="dist/css/main.css">
+		<link rel="stylesheet" href="dist/css/all.min.css">
+		<link rel="icon" href="dist/images/logos/icon.png">
+	</head>
+	<body>
+		<!-- starting the navivagition bar -->
+		<div id="navBar">
+			<div class="container">
+				<div class="logoDiv">
+					<a href="index.html"><img src="dist/images/logos/logo.png" alt=""></a>
+				</div>
+				<div class="buttonDiv" onclick="navBarToggle()">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<ul class="collaps">
+					<li class="navItem searchBox">
+						<form action="searches.html">  <!-- if the form is submitted , it take to this link with search parrams -->
+						<input name="name" class="search" type="text" placeholder="Movie name">
+						<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+					</form>
+				</li>
+				<li class="li menuItem"><a href="index.html">Home</a></li>
+				<li class="li menuItem active"><a href="artGuide.html">Art Guide</a></li>
+				<li class="li menuItem"><a href="aboutUs.html">About us</a></li>
+				<li class="li menuItem"><a href="contactUs.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Nav bar ends -->
+	<!-- content and ads div starts -->
+	<div class="adsAndContent">
+		<!-- Menu div starting -->
+		<div class="menuBody ">
+			<div class="menu">
+				<div class="title">
+					<span>Menu</span>
+				</div>
+				<div class="menuItems">
+					<div class="item" id="eventDiv">
+						<span>Events</span>
+					</div>
+					<div class="item" id="articleDiv">
+						<span>Articles</span>
+					</div>
+					<div class="item" id="artistDiv">
+						<span>Artists</span>
+					</div>
+					<div class="item" id="venuesDiv">
+						<span>Venues</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- done with menu div -->
+		<!-- contents div starts -->
+		<div class="contentBody">
+			<!-- Events div starts -->
+			<div class="eventDiv">
+				<div class="container">
+					<span class="sectionTitle">Events</span>
+					<div class="events smallPreviewBoxes">
+						<!-- <div class="smallPreview">
+							<a href="event.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<div class="time">
+										<span class="start">26/06/20</span>
+										<span>-</span>
+										<span class="end">29/06/20</span>
+									</div>
+									<span class="shortDes">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat commodi inventore porro quas, at vitae facilis nihil.
+									</span>
+								</div>
+							</a>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- Events div ending -->
+			<!-- Articles div starts -->
+			<div class="articleDiv">
+				<div class="container">
+					<span class="sectionTitle">Articles</span>
+					<div class="articles smallPreviewBoxes">
+						<!-- <div class="smallPreview">
+							<a href="artist.html" class="link">
+								<div class="featureImage">
+									<img src="" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+									</span>
+									<span class="shortDes">
+									</span>
+								</div>
+							</a>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- Articles div ending -->
+			<!-- Artists div starts -->
+			<div class="artistDiv ">
+				<div class="container">
+					<span class="sectionTitle">Artists</span>
+					<div class="artists smallPreviewBoxes">
+						<!-- <div class="smallPreview">
+							<a href="artist.html" class="link">
+								<div class="featureImage">
+									<img src="" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+									</span>
+									<span class="shortDes">
+									</span>
+								</div>
+							</a>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- Artists div ending -->
+			<!-- venues div starts -->
+			<div class="venuesDiv ">
+				<div class="container">
+					<span class="sectionTitle">Venues</span>
+					<div class="venues smallPreviewBoxes">
+						<!-- <div class="smallPreview">
+							<a href="venue.html" class="link">
+								<div class="featureImage">
+									<img src="dist/images/recent event/img3.png" alt="">
+								</div>
+								<div class="content">
+									<span class="title">
+										Lorem ipsum dolor sit amet.
+									</span>
+									<div class="address">
+										<span>11,sfhjlf,jshf-389</span>
+									</div>
+								</div>
+							</a>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- venues div ending -->
+		</div>
+		<!-- ads section starts -->
+		<div class="adsBody">
+			<div class="container">
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads1.gif" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads2.gif" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads3.jpg" alt="" class="featureImage">
+				</a>
+				<a href="#" class="ads">
+					<img src="dist/images/ads/ads4.jpg" alt="" class="featureImage">
+				</a>
+			</div>
+		</div>
+		<!-- ads sections ends -->
+	</div>
+	<div id="footer">
+		<span>Copyright &#169 2020 kopenhagen.co. All rights resereved</span>
+	</div>
+	<script src="dist/js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="dist/js/Fetcher.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="dist/js/searchResults.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>

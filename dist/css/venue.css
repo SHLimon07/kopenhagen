@@ -7,8 +7,13 @@
 	margin-bottom: 30px;
 }
 
-.contentBody .details span{
+.contentBody .details span,
+.contentBody .details p{
 	color: var(--midText);
+}
+
+.contentBody .details a{
+	color: var(--orangy);
 }
 
 .contentBody .details{

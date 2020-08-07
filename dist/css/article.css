@@ -13,6 +13,22 @@
 	margin-bottom: 30px;
 }
 
+.contentBody .details{
+	background: var(--lightBg);
+	padding: 10px;
+}
+
+.contentBody .details .date{
+	color: var(--orangy);
+	letter-spacing: 1px;
+	padding-left: 20px;
+}
+
+.contentBody .details .author{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 .contentBody .description{
 	margin-bottom: 30px;
 }
