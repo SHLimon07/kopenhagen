@@ -3,6 +3,8 @@ artGuideMain();
 
 async function artGuideMain (argument) {
 	// body... 
+
+	//initialing the menu to choose between different options 
 	initMenu();
 
 	var artistData = await fetchPost('artist');

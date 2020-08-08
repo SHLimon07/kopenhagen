@@ -15,6 +15,7 @@ function calenderMain () {
 
 function initDates () {
 	// body... 
+	//this function adds event listener to the dates
 
 	var allDate = document.querySelectorAll('.grid .dateRow .col');
 	
@@ -30,6 +31,7 @@ function initDates () {
 }
 
 function initDateEvents(date){
+	//it is called from initDates()
 
 	var mainDiv = document.querySelector('.contentBody .smallPreviewBoxes');
 	mainDiv.innerHTML = '';
@@ -52,6 +54,8 @@ function initDateEvents(date){
 
 
 function createEventBox(data,mainDiv){
+	// this is called from initDateEvents()
+	//creates event boxes for the particular data
 
 	var previewBox = document.createElement('div');
 	previewBox.classList.add('smallPreview');
@@ -109,6 +113,8 @@ function createEventBox(data,mainDiv){
 
 function initMonthYear () {
 	// body... 
+	//executed when the page is first opend
+	//this to present date 
 	var date = new Date(Date.now());
 	monthNow = date.getMonth();
 	yearNow = date.getFullYear();
@@ -118,22 +124,29 @@ function initMonthYear () {
 
 function updateMonthYear () {
 	// body... 
+	//whenever the month or year is changed it calls update for everything
 
 	document.querySelector(".calender .month .monthNum").innerHTML = months[monthNow];
 	document.querySelector(".calender .year .yearNum").innerHTML = yearNow;
 
+	//updates the calender grid
 	updateGrid();
+	//updates the events on the calender
 	updateEvents();
 }
 
 async function updateEvents() {
 	// body...
+
+	//clearing the event list div when the calender is changed, to make sure nothing overlaps
 	var mainDiv = document.querySelector('.contentBody .smallPreviewBoxes');
 	mainDiv.innerHTML = '';
 
+	//fetching and filtering the date according to the calender
 	var eventData = await fetchPost('event');
 	filteredData = getCalenderEvents(eventData);
 
+	// sending the filtered data to initialize events
 	initEvents(filteredData);
 }
 
@@ -156,10 +169,14 @@ function initEvents (data) {
 }
 function createEventDot (data,date) {
 	// body...
+	//this function creates the events lebels/dots on the calender
 	date = parseInt(date);
 
+	//since the date divs where given perticular id , 
+	//will get the target date to put the event on that
 	var target = document.querySelector('.calenderDiv .grid #day'+date);
 
+	//creating the dot
 	var dot = document.createElement('span');
 	dot.classList.add('eventDot');
 	dot.innerHTML = data.title.rendered;
@@ -195,14 +212,17 @@ function updateGrid () {
 
 	var grid = document.querySelector('.grid');
 	
+	//this portion clears previous data on the calender grid 
 	for(var j = 1;j<7;j++)
 	{
 		for(var i=0;i<7;i++)
 		{
 			grid.children[j].children[i].querySelector('.date').innerHTML = '';
+			grid.children[j].children[i].querySelector('.col').classList.remove('hover');
 		}
 	}
 
+	//UPDATES THE CALENDER ACCORDING TO CHOICE
 	for(var j = 1;j<7;j++)
 	{
 		for(var i=0;i<7;i++)
@@ -214,6 +234,7 @@ function updateGrid () {
 					return;
 				var dateNow = date.getDate();
 				var dateDiv = grid.children[j].children[i].querySelector('.date');
+				grid.children[j].children[i].querySelector('.col').classList.add('hover');
 				dateDiv.innerHTML = dateNow;
 				dateDiv.id = 'day'+ dateNow;
 				dateNow++;
@@ -225,8 +246,11 @@ function updateGrid () {
 
 function monthBack () {
 	// body... 
+	//when the left button for months is clicked
 
 	monthNow--;
+
+	//going to previous year
 	if(monthNow==-1)
 	{
 		monthNow=11;
@@ -239,8 +263,11 @@ function monthBack () {
 
 function monthForth () {
 	// body... 
+	//when the right button for months is clicked
 
 	monthNow++;
+
+	//going to next year
 	if(monthNow==12)
 	{
 		monthNow=0;
@@ -253,6 +280,7 @@ function monthForth () {
 
 function yearBack () {
 	// body... 
+	//when the left button for yearss is clicked
 
 	yearNow--;
 	updateMonthYear();
@@ -261,6 +289,7 @@ function yearBack () {
 
 function yearForth () {
 	// body... 
+	//when the right button for yearss is clicked
 
 	yearNow++;
 	updateMonthYear();

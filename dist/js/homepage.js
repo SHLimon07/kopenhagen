@@ -2,12 +2,16 @@
 homeMain();
 
 async function homeMain(){
+
+	//geting recent article and event data
 	var articleData = await fetchPost('article');
 	var eventData = await fetchPost('event');
 
+	//initializing the articles and events on the page
 	articleInit(articleData);
 
 	eventInit(eventData);
+
 }
 
 function articleInit (data) {

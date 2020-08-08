@@ -5,16 +5,22 @@ artistMain();
 async function artistMain () {
 	// body... 
 
+	//getting the artist post id from url
 	var artistId = getId(window.location);
 
+	// getting the artist data from rest api
 	var artistData = await idToData('artist',artistId);
 
+	//initializing html with data values
 	initHtml(artistData);
 
+	//getting all events data
 	var eventData = await fetchPost('event');
 
+	//filtering data for this artist
 	var filteredData = getArtistData(eventData,artistId);
 
+	// initializing events for this artist
 	eventInit(filteredData);
 
 }

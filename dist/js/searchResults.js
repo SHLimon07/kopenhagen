@@ -2,26 +2,32 @@
 artGuideMain();
 
 async function artGuideMain (argument) {
-	// body... 
+	// body...
+	//this funtion initializes the menu option to filter among the categories 
 	initMenu();
 
+	//getting the search input from url
 	var name = getName();
 
-	var artistData = await fetchPost('artist?search='+name);
+	//fetching  events data according to search
+	var eventData = await fetchPost('event?search='+name);
 
-	artistInit(artistData);
+	eventInit(eventData);
 
-	var venueData = await fetchPost('venue?search='+name);
-
-	venueInit(venueData);
-
+	//fetching  article data according to search
 	var articleData = await fetchPost('article?search='+name);
 
 	articleInit(articleData);
 
-	var eventData = await fetchPost('event?search='+name);
+	//fetching  artist data according to search
+	var artistData = await fetchPost('artist?search='+name);
 
-	eventInit(eventData);
+	artistInit(artistData);
+
+	//fetching  venue data according to search
+	var venueData = await fetchPost('venue?search='+name);
+
+	venueInit(venueData);
 }
 
 
@@ -34,160 +40,42 @@ function getName () {
 }
 
 
-function artistInit (data) {
+function initMenu () {
 	// body... 
+	hideAllContent();
+	var menu = document.querySelector('.menuBody .menuItems');
+	menu.children[0].classList.add('active');
+	document.querySelector('.contentBody .eventDiv').classList.remove('displayNone');
 
-	var mainDiv = document.querySelector('.artistDiv .smallPreviewBoxes');
-
-	for(var i=0;i<data.length;i++)
+	
+	for(var i=0;i<4;i++)
 	{
-		createArtistBox(data[i],mainDiv);
+		menu.children[i].addEventListener("click",function(){
+
+			var id = this.id;
+			hideAllContent();
+			this.classList.add('active');
+			var target = document.querySelector('.contentBody .'+id);
+			target.classList.remove('displayNone');
+		});
 	}
 }
 
-
-function createArtistBox(data,mainDiv){
-
-
-	var previewBox = document.createElement('div');
-	previewBox.classList.add('smallPreview');
-	
-	var boxLink = document.createElement('a');
-	boxLink.href = "artist.html?id=" + data.id;
-	boxLink.classList.add('link');
-
-	var imageDiv = document.createElement('div');
-	imageDiv.classList.add('featureImage');
-
-	var image =  document.createElement('img');
-	image.src = data.acf.image;
-
-	var contentDiv = document.createElement('div');
-	contentDiv.classList.add('content');
-
-	var title = document.createElement('span');
-	title.classList.add('title');
-	title.innerHTML = data.title.rendered;
-
-	var shortDes = document.createElement('span');
-	shortDes.classList.add('shortDes');
-	shortDes.innerHTML = data.content.rendered;
-
-
-	mainDiv.appendChild(previewBox);
-	previewBox.appendChild(boxLink);
-	boxLink.appendChild(imageDiv);
-	boxLink.appendChild(contentDiv);
-	contentDiv.appendChild(title);
-	contentDiv.appendChild(shortDes);
-	imageDiv.appendChild(image);
-
-
-}
-
-function venueInit (data) {
+function hideAllContent () {
 	// body... 
-
-	var mainDiv = document.querySelector('.venuesDiv .smallPreviewBoxes');
-
-	for(var i=0;i<data.length;i++)
-	{
-		createVenueBox(data[i],mainDiv);
-	}
-}
-
-
-function createVenueBox(data,mainDiv){
-
-
-	var previewBox = document.createElement('div');
-	previewBox.classList.add('smallPreview');
+	var contentBody = document.querySelector('.contentBody');
 	
-	var boxLink = document.createElement('a');
-	boxLink.href = "venue.html?id=" + data.id;
-	boxLink.classList.add('link');
-
-	var imageDiv = document.createElement('div');
-	imageDiv.classList.add('featureImage');
-
-	var image =  document.createElement('img');
-	image.src = data.acf.image;
-
-	var contentDiv = document.createElement('div');
-	contentDiv.classList.add('content');
-
-	var title = document.createElement('span');
-	title.classList.add('title');
-	title.innerHTML = data.title.rendered;
-
-	var addressDiv = document.createElement('div');
-	addressDiv.classList.add('address');
-
-	var address = document.createElement('span');
-	address.innerHTML = data.acf.address;
-
-
-	mainDiv.appendChild(previewBox);
-	previewBox.appendChild(boxLink);
-	boxLink.appendChild(imageDiv);
-	boxLink.appendChild(contentDiv);
-	contentDiv.appendChild(title);
-	contentDiv.appendChild(addressDiv);
-	imageDiv.appendChild(image);
-	addressDiv.appendChild(address);
-
-
-}
-
-function articleInit (data) {
-	// body... 
-
-	var mainDiv = document.querySelector('.articleDiv .smallPreviewBoxes');
-
-	for(var i=0;i<data.length;i++)
+	for(var i = 0; i<4; i++)
 	{
-		createArtistBox(data[i],mainDiv);
+		contentBody.children[i].classList.add('displayNone');
 	}
-}
 
-
-function createArticleBox(data,mainDiv){
-
-
-	var previewBox = document.createElement('div');
-	previewBox.classList.add('smallPreview');
+	var menuBody = document.querySelector('.menuBody .menuItems');
 	
-	var boxLink = document.createElement('a');
-	boxLink.href = "article.html?id=" + data.id;
-	boxLink.classList.add('link');
-
-	var imageDiv = document.createElement('div');
-	imageDiv.classList.add('featureImage');
-
-	var image =  document.createElement('img');
-	image.src = data.acf.image;
-
-	var contentDiv = document.createElement('div');
-	contentDiv.classList.add('content');
-
-	var title = document.createElement('span');
-	title.classList.add('title');
-	title.innerHTML = data.title.rendered;
-
-	var shortDes = document.createElement('span');
-	shortDes.classList.add('shortDes');
-	shortDes.innerHTML = data.content.rendered;
-
-
-	mainDiv.appendChild(previewBox);
-	previewBox.appendChild(boxLink);
-	boxLink.appendChild(imageDiv);
-	boxLink.appendChild(contentDiv);
-	contentDiv.appendChild(title);
-	contentDiv.appendChild(shortDes);
-	imageDiv.appendChild(image);
-
-
+	for(var i = 0; i<4; i++)
+	{
+		menuBody.children[i].classList.remove('active');
+	}
 }
 
 function eventInit (data) {
@@ -254,43 +142,154 @@ function createEventBox(data,mainDiv){
 	timeDiv.appendChild(dash);
 	timeDiv.appendChild(end);
 
-
 }
 
-function initMenu () {
+function articleInit (data) {
 	// body... 
-	hideAllContent();
-	var menu = document.querySelector('.menuBody .menuItems');
-	menu.children[0].classList.add('active');
-	document.querySelector('.contentBody .eventDiv').classList.remove('displayNone');
 
-	
-	for(var i=0;i<4;i++)
+	var mainDiv = document.querySelector('.articleDiv .smallPreviewBoxes');
+
+	for(var i=0;i<data.length;i++)
 	{
-		menu.children[i].addEventListener("click",function(){
-
-			var id = this.id;
-			hideAllContent();
-			this.classList.add('active');
-			var target = document.querySelector('.contentBody .'+id);
-			target.classList.remove('displayNone');
-		});
+		createArticleBox(data[i],mainDiv);
 	}
 }
 
-function hideAllContent () {
+
+function createArticleBox(data,mainDiv){
+
+	var previewBox = document.createElement('div');
+	previewBox.classList.add('smallPreview');
+	
+	var boxLink = document.createElement('a');
+	boxLink.href = "article.html?id=" + data.id;
+	boxLink.classList.add('link');
+
+	var imageDiv = document.createElement('div');
+	imageDiv.classList.add('featureImage');
+
+	var image =  document.createElement('img');
+	image.src = data.acf.image;
+
+	var contentDiv = document.createElement('div');
+	contentDiv.classList.add('content');
+
+	var title = document.createElement('span');
+	title.classList.add('title');
+	title.innerHTML = data.title.rendered;
+
+	var shortDes = document.createElement('span');
+	shortDes.classList.add('shortDes');
+	shortDes.innerHTML = data.content.rendered;
+
+
+	mainDiv.appendChild(previewBox);
+	previewBox.appendChild(boxLink);
+	boxLink.appendChild(imageDiv);
+	boxLink.appendChild(contentDiv);
+	contentDiv.appendChild(title);
+	contentDiv.appendChild(shortDes);
+	imageDiv.appendChild(image);
+
+}
+
+function artistInit (data) {
 	// body... 
-	var contentBody = document.querySelector('.contentBody');
-	
-	for(var i = 0; i<4; i++)
-	{
-		contentBody.children[i].classList.add('displayNone');
-	}
 
-	var menuBody = document.querySelector('.menuBody .menuItems');
-	
-	for(var i = 0; i<4; i++)
+	var mainDiv = document.querySelector('.artistDiv .smallPreviewBoxes');
+
+	for(var i=0;i<data.length;i++)
 	{
-		menuBody.children[i].classList.remove('active');
+		createArtistBox(data[i],mainDiv);
 	}
 }
+
+
+function createArtistBox(data,mainDiv){
+
+	var previewBox = document.createElement('div');
+	previewBox.classList.add('smallPreview');
+	
+	var boxLink = document.createElement('a');
+	boxLink.href = "artist.html?id=" + data.id;
+	boxLink.classList.add('link');
+
+	var imageDiv = document.createElement('div');
+	imageDiv.classList.add('featureImage');
+
+	var image =  document.createElement('img');
+	image.src = data.acf.image;
+
+	var contentDiv = document.createElement('div');
+	contentDiv.classList.add('content');
+
+	var title = document.createElement('span');
+	title.classList.add('title');
+	title.innerHTML = data.title.rendered;
+
+	var shortDes = document.createElement('span');
+	shortDes.classList.add('shortDes');
+	shortDes.innerHTML = data.content.rendered;
+
+
+	mainDiv.appendChild(previewBox);
+	previewBox.appendChild(boxLink);
+	boxLink.appendChild(imageDiv);
+	boxLink.appendChild(contentDiv);
+	contentDiv.appendChild(title);
+	contentDiv.appendChild(shortDes);
+	imageDiv.appendChild(image);
+
+}
+
+function venueInit (data) {
+	// body... 
+
+	var mainDiv = document.querySelector('.venuesDiv .smallPreviewBoxes');
+
+	for(var i=0;i<data.length;i++)
+	{
+		createVenueBox(data[i],mainDiv);
+	}
+}
+
+function createVenueBox(data,mainDiv){
+
+	var previewBox = document.createElement('div');
+	previewBox.classList.add('smallPreview');
+	
+	var boxLink = document.createElement('a');
+	boxLink.href = "venue.html?id=" + data.id;
+	boxLink.classList.add('link');
+
+	var imageDiv = document.createElement('div');
+	imageDiv.classList.add('featureImage');
+
+	var image =  document.createElement('img');
+	image.src = data.acf.image;
+
+	var contentDiv = document.createElement('div');
+	contentDiv.classList.add('content');
+
+	var title = document.createElement('span');
+	title.classList.add('title');
+	title.innerHTML = data.title.rendered;
+
+	var addressDiv = document.createElement('div');
+	addressDiv.classList.add('address');
+
+	var address = document.createElement('span');
+	address.innerHTML = data.acf.address;
+
+
+	mainDiv.appendChild(previewBox);
+	previewBox.appendChild(boxLink);
+	boxLink.appendChild(imageDiv);
+	boxLink.appendChild(contentDiv);
+	contentDiv.appendChild(title);
+	contentDiv.appendChild(addressDiv);
+	imageDiv.appendChild(image);
+	addressDiv.appendChild(address);
+
+}
+

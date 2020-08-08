@@ -1,3 +1,5 @@
+//functions in this page are used by many pages
+
 function navBarToggle() {
     var icon = document.querySelector('.buttonDiv');
     var menu = document.querySelector('.collaps');

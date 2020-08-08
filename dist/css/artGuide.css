@@ -134,13 +134,19 @@
 	/* border-radius: 50%; */
 	background-color: var(--lightBg);
 	border: 1px solid var(--midBg);
-	overflow: hidden;
 }
 
 .calenderDiv .grid .row .col .date{
 	display: block;
 	padding: 2px;
 	color: var(--orangy);
+}
+
+.calenderDiv .grid .row .col.hover{
+	cursor: pointer;
+}
+.calenderDiv .grid .row .col.hover:hover{
+	background: var(--lightText);
 }
 
 /* styling the days row */

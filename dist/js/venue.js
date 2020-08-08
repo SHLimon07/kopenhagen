@@ -4,17 +4,22 @@ venueMain();
 
 async function venueMain () {
 	// body... 
+	//getting the id of the post of the venue from the url
+	var venueId = getId(window.location);//the function is defined on main.js
 
-	var venueId = getId(window.location);
-
+	//fetching the venue data from wp rest api
 	var venueData = await idToData('venue',venueId);
 
+	//initialing the inner html values for the perticular venue
 	initHtml(venueData);
 
+	//getting all the event data to filter events on this venue
 	var eventData = await fetchPost('event');
 
+	//FILTERING THE EVENTS THAT ARE HOLD ON THIS VENUE
 	var filteredData = getVenueData(eventData,venueId);
 
+	//INITIALIZING THE EVENTS BOXES ON THIS VENUE
 	eventInit(filteredData);
 
 }
@@ -23,6 +28,7 @@ async function venueMain () {
 
 function initHtml (data) {
 	// body... 
+	//initializing the venue data on html
 	
 	var main = document.querySelector('.contentBody .gridBox');
 
@@ -34,6 +40,7 @@ function initHtml (data) {
 }
 
 function getVenueData (data,id) {
+	//this function filters the events that are on this venue
 	// body...
 
 	var filtered = [];
@@ -46,9 +53,9 @@ function getVenueData (data,id) {
 	return filtered;
 }
 
-
 function eventInit (data) {
-	// body... 
+	// body...
+	//initialize events on this venue 
 
 	var mainDiv = document.querySelector('.contentBody .smallPreviewBoxes');
 
@@ -60,6 +67,8 @@ function eventInit (data) {
 
 
 function createEventBox(data,mainDiv){
+	//creates the events box that links to the events post
+
 
 	var previewBox = document.createElement('div');
 	previewBox.classList.add('smallPreview');
